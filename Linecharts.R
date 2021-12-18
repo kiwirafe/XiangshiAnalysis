@@ -3,7 +3,6 @@ library(tidyr)
 library(plotly)
 library(reshape)
 
-
 commonprocessing <- function(dat) {
   colnames(dat) <- c("File1", "File2", "Result")
   dat$File1 <- as.numeric(dat$File1)
@@ -14,7 +13,6 @@ commonprocessing <- function(dat) {
   dat <- dat %>% select("index", "Result")
   dat
 }
-
 
 data1 <- commonprocessing(read.csv("result/Long Text Original.csv"))
 colnames(data1)[colnames(data1)=="Result"] <- "Result1"
